@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for cache/templateCache.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../prettify.css">
+
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">cache/templateCache.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">cache/</a> &#187; templateCache.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+angular.module('mycs.cache').
+run(['$templateCache', function($templateCache) {
+  $templateCache.put('analizer/views/perf.comparison.html',
+    '&lt;div ng-controller="AnalizerController" ng-init="loadData([\'vk\', \'facebook\'])"&gt;\n' +
+    '	\n' +
+    '	&lt;mycs-perf-comparison-table data="performanceData"&gt;&lt;/mycs-perf-comparison-table&gt;\n' +
+    '\n' +
+    '&lt;/div&gt;'
+  );
+  $templateCache.put('analizer/directives/perfComparisonTable/tpls/perfComparisonTable.html',
+    '&lt;div class="table-layout"&gt;\n' +
+    ' \n' +
+    '    &lt;table&gt;\n' +
+    '    	&lt;thead&gt;\n' +
+    '\n' +
+    '    		&lt;th&gt;\n' +
+    '                &lt;span&gt;Variable&lt;/span&gt;\n' +
+    '    		&lt;/th&gt;\n' +
+    '            &lt;th&gt;\n' +
+    '                &lt;span&gt;Value(\n' +
+    '                    &lt;a href="javascript:void(0)" ng-class="{active: ordering == \'min\'}" ng-click="changeOrdering(\'min\')"&gt;min&lt;/a&gt;\n' +
+    '                    &amp;nbsp;/&amp;nbsp;\n' +
+    '                    &lt;a href="javascript:void(0)" ng-class="{active: ordering == \'max\'}" ng-click="changeOrdering(\'max\')"&gt;max&lt;/a&gt;\n' +
+    '                )&lt;/span&gt;\n' +
+    '            &lt;/th&gt;\n' +
+    '            &lt;th&gt;\n' +
+    '                &lt;span&gt;Average&lt;/span&gt;\n' +
+    '            &lt;/th&gt;\n' +
+    '            &lt;th&gt;\n' +
+    '                &lt;span&gt;Website&lt;/span&gt;\n' +
+    '            &lt;/th&gt;\n' +
+    '\n' +
+    '    	&lt;/thead&gt;\n' +
+    '        &lt;tbody&gt;\n' +
+    '\n' +
+    '            &lt;tr ng-repeat="(metric, values) in metrics"&gt;\n' +
+    '                &lt;td&gt;\n' +
+    '                   &lt;span&gt;{{::metric}}&lt;/span&gt; \n' +
+    '                &lt;/td&gt;\n' +
+    '                &lt;td&gt;\n' +
+    '                    &lt;span&gt;{{values[ordering][ordering]}}&lt;/span&gt;\n' +
+    '                &lt;/td&gt;\n' +
+    '                &lt;td&gt;\n' +
+    '                    &lt;span&gt;{{values[ordering].average}}&lt;/span&gt;\n' +
+    '                &lt;/td&gt;\n' +
+    '                &lt;td&gt;\n' +
+    '                    &lt;span&gt;{{values[ordering].site}}&lt;/span&gt;\n' +
+    '                &lt;/td&gt;\n' +
+    '            &lt;/tr&gt;\n' +
+    '\n' +
+    '        &lt;/tbody&gt;\n' +
+    '    &lt;/table&gt;\n' +
+    '    \n' +
+    '&lt;/div&gt;'
+  );
+}]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Feb 21 2015 04:00:57 GMT+0200 (EET)</div>
+</div>
+
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../sorter.js"></script>
+</body>
+</html>

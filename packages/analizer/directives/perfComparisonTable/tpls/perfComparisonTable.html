@@ -1,0 +1,49 @@
+
+<div class="table-layout">
+ 
+    <table>
+    	<thead>
+
+    		<th>
+                <span>Variable</span>
+    		</th>
+            <th>
+                <span>Value(
+                    <a href="javascript:void(0)" 
+                        ng-class="{active: ordering == 'min'}" 
+                        ng-click="changeOrdering('min')">min</a>
+                    &nbsp;/&nbsp;
+                    <a href="javascript:void(0)" 
+                        ng-class="{active: ordering == 'max'}" 
+                        ng-click="changeOrdering('max')">max</a>
+                )</span>
+            </th>
+            <th>
+                <span>Average</span>
+            </th>
+            <th>
+                <span>Website</span>
+            </th>
+
+    	</thead>
+        <tbody>
+
+            <tr ng-repeat="(metric, values) in metrics">
+                <td>
+                   <span>{{::metric}}</span> 
+                </td>
+                <td>
+                    <span>{{values[ordering][ordering]}}</span>
+                </td>
+                <td>
+                    <span>{{values[ordering].average}}</span>
+                </td>
+                <td>
+                    <span>{{values[ordering].site}}</span>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+</div>

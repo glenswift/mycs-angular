@@ -1,0 +1,39 @@
+.table-layout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  overflow: auto;
+}
+.table-layout table {
+  border-collapse: collapse;
+}
+.table-layout table thead {
+  background: #373636;
+}
+.table-layout table thead a.active {
+  color: #b7bbff;
+}
+.table-layout table tr:nth-child(even) {
+  background: #e8e8e8;
+}
+.table-layout table th,
+.table-layout table td {
+  padding: 2px 7px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: Oswald, times, arial;
+  border: 1px solid #d7d7d7;
+}
+.table-layout table tr {
+  color: #ffffff;
+}
+.table-layout table td {
+  color: #2d2d2d;
+}
+.table-layout table a {
+  color: inherit;
+}
